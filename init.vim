@@ -20,7 +20,6 @@ Plug 'nvim-lualine/lualine.nvim'
 
 """ Misc
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-sensible'
 
 """ color scheme
 Plug 'shaunsingh/nord.nvim'
@@ -45,15 +44,35 @@ set hidden
 set number relativenumber
 set title
 set noswapfile
+set numberwidth=4
 
+" start scrolling when 8 lines from top or bottom
+set scrolloff=8
+
+" open splits intuitively
+set splitbelow
+set splitright
+
+" Enable mouse support
+set mouse=a
 
 colorscheme nord
 
+" Better colors
+set termguicolors
+
 " Core
 let mapleader=","
-
 inoremap jj <ESC>
 
+" telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
 
+" split window navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
