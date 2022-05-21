@@ -18,11 +18,14 @@ Plug 'nvim-telescope/telescope.nvim'
 """ lualine
 Plug 'nvim-lualine/lualine.nvim'
 
+""" Matching brackets
+Plug 'windwp/nvim-autopairs'
+
 """ Misc
 Plug 'tpope/vim-fugitive'
 
 """ color scheme
-Plug 'shaunsingh/nord.nvim'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 lua << EOF
@@ -30,6 +33,7 @@ lua << EOF
     require('nvim-cmp-config')
     require('treesitter-config')
     require('telescope-config')
+    require('autopair-config')
     require('lualine-config')
 EOF
 
@@ -76,3 +80,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+
+" Go commands
+command Grun !go run %
+command Gruns !go run *.go
