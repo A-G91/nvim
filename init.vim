@@ -85,4 +85,3 @@ nnoremap <C-H> <C-W><C-H>
 
 " Go commands
 command Grun !go run %
-command Gruns !go run *.go
