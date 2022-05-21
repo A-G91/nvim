@@ -3,11 +3,6 @@ call plug#begin()
 """ LSP (requires a server to be installed)
 Plug 'neovim/nvim-lspconfig'
 
-""" Autocompletion
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'L3MON4D3/LuaSnip'
-
 """ Language interpreter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
@@ -20,6 +15,13 @@ Plug 'nvim-lualine/lualine.nvim'
 
 """ Matching brackets
 Plug 'windwp/nvim-autopairs'
+
+""" Completion
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/nvim-buffer'
+
+Plug 'L3MON4D3/LuaSnip'
 
 """ Misc
 Plug 'tpope/vim-fugitive'
