@@ -88,6 +88,10 @@ colorscheme nord
 " Better colors
 set termguicolors
 
+" Transparent background
+highlight Normal guibg=none
+highlight NonText guibg=none
+
 " Core
 let mapleader=","
 inoremap jj <ESC>
